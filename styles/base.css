@@ -1,0 +1,180 @@
+/* --- Basic Reset & Global Styles --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #2e5a7d;
+    color: white;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #ffd700;
+}
+
+/* --- Main Layout (Grid) --- */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px; 
+    justify-items: stretch;
+    grid-template-columns: 2fr 1.5fr;
+}
+
+/* --- Card Styling --- */
+.card {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden; /* Ensures h3 corners stay rounded */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    background-color: #2e5a7d;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+}
+
+.card-content {
+    padding: 30px;
+    position: relative; /* Allows for absolute positioning of elements inside */
+}
+
+
+.about-me-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the image and text together */
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.about-me-bio img {
+    display: block;
+    max-width: 150px; /* Keeps picture small */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.profile-img {
+    float: right;
+    width: 150px; /* Adjust size to match example */
+    height: auto;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Optional border like the example */
+}
+
+/* --- Flag Section Styling --- */
+.flag-container {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-top: 20px;
+    border-top: 0px solid #ddd;
+    padding-top: 15px;
+    text-align: left;
+}
+
+.flag-box {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.flag-box img {
+    width: 100px; /* Small flag size */
+    height: auto;
+}
+
+.flag-caption {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+/* --- Web Dev Resources (Card 2 Spacing) --- */
+.card ul {
+    list-style-type: circle;
+    padding-left: 45px;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    padding-right: 20px;
+    line-height: 1.5;
+    
+   
+}
+
+.card li {
+    margin-bottom: 12px;
+     text-align: left;
+}
+
+.card li a {
+    color: #2e5a7d;
+    text-decoration: none;
+}
+
+.card li a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer (Centered) --- */
+footer {
+    background-color: #2e5a7d;
+    color: white;
+    text-align: center; /* Centers text */
+    padding: 25px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers elements in flexbox */
+    justify-content: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer #lastModified {
+    color: #ffd700; /* Yellow highlight for modification date */
+    font-size: 0.9rem;
+}
