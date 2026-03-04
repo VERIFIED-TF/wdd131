@@ -65,7 +65,15 @@ main {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.card h3 {
+.card h2  {
+    background-color: #2e5a7d;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+}
+
+.card h3  {
     background-color: #2e5a7d;
     color: white;
     text-align: center;
