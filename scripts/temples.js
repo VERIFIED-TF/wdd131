@@ -3,10 +3,10 @@ document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
 // 2. Hamburger Menu Toggle
-const mainnav = document.querySelector('nav');
-const hambutton = document.querySelector('#menu');
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('nav');
 
-hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show');
-    hambutton.classList.toggle('open');
+hamButton.addEventListener('click', () => {
+    navigation.classList.toggle('show');
+    hamButton.classList.toggle('open');
 });

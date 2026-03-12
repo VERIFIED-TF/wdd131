@@ -1,20 +1,23 @@
-/* Navigation - Desktop View */
-#menu {
-    display: none; /* Hide hamburger */
-}
-
-nav {
-    display: block !important;
-}
-
-.navigation {
-    display: flex !important
-}
-
-
-
-/* Tablet and Desktop Views */
+/* --- Desktop & Tablet View --- */
+ 
 @media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr); /* Exactly like the screenshot */
+    #menu {
+        display: none; /* Hide hamburger on desktop */
     }
+
+    nav {
+        display: block; /* Show nav on desktop */
+        position: static; /* Reset absolute positioning */
+    }
+
+    .navigation {
+        flex-direction: row; /* Horizontal menu */
+        justify-content: flex-end;
+    }
+
+    .grid-container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr); /* 3 column grid */
+    }
+}
