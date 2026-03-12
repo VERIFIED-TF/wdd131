@@ -1,0 +1,20 @@
+/* Navigation - Desktop View */
+#menu {
+    display: none; /* Hide hamburger */
+}
+
+nav {
+    display: block !important;
+}
+
+.navigation {
+    display: flex !important
+}
+
+
+
+/* Tablet and Desktop Views */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Exactly like the screenshot */
+    }
