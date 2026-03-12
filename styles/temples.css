@@ -46,11 +46,12 @@ h1, h2 {
 
 /* Navigation - Mobile View */
 nav {
-    display: none; /* Hidden by default on mobile */
+    display: none; 
+    flex-direction: column;
 }
 
 nav.show {
-    display: block; /* Added this so it actually shows up */
+    display: flex; /* Added this so it actually shows up */
     position: absolute;
     top: 70px;
     left: 0;

@@ -6,18 +6,20 @@
     }
 
     nav {
-        display: block; /* Show nav on desktop */
-        position: static; /* Reset absolute positioning */
+        display: flex !important; 
+        position: static;
+        justify-content: flex-end; 
     }
 
     .navigation {
-        flex-direction: row; /* Horizontal menu */
+        flex-direction: row; 
         justify-content: flex-end;
+        gap: 1rem;
     }
 
     .grid-container {
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(3, 1fr); /* 3 column grid */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
