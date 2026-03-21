@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Your Name Here" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta name="author" content="Lucky Francis Oghenebrume" >
   <meta name="description" content="Nigeria – The Giant of Africa. Facts, weather, and beauty of Nigeria." />
-
   <title>Nigeria – The Giant of Africa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,63 +19,65 @@
     <p class="subtitle">The Giant of Africa</p>
   </header>
 
-  <!-- Hero + overlaid cards wrapper -->
-  <div class="hero-wrapper">
-    <picture>
-      <source
-        srcset="images/nigeria-large.jpg"
-        media="(min-width: 768px)"
-      />
-      <img
-        src="images/nigeria-small.jpg"
-        srcset="images/nigeria-small.jpg 480w, images/nigeria-large.jpg 1200w"
-        sizes="100vw"
-        alt="Aerial view of Lagos, Nigeria, showing the sprawling coastal megacity"
-        class="hero-img"
-        width="1200"
-        height="600"
-      />
-    </picture>
+  <main>
+    <div class="hero-wrapper">
+      <picture>
+        <source
+          srcset="images/nigeria-large.jpg"
+          media="(min-width: 768px)"
+        />
+        <img
+          src="images/nigeria-small.jpg"
+          srcset="images/nigeria-small.jpg 480w, images/nigeria-large.jpg 1200w"
+          sizes="100vw"
+          alt="Aerial view of Lagos, Nigeria, showing the sprawling coastal megacity"
+          class="hero-img"
+          width="1200"
+          height="600"
+        />
+      </picture>
 
-    <!-- Data card -->
-    <section class="data-section" aria-label="Nigeria country facts">
-      <h2>Data</h2>
-      <dl>
-        <dt>Area:</dt>          <dd>923,769 sq km</dd>
-        <dt>Population:</dt>   <dd>223,804,632</dd>
-        <dt>Capital:</dt>      <dd>Abuja</dd>
-        <dt>Languages:</dt>    <dd>English, Hausa, Yoruba, Igbo</dd>
-        <dt>Currency:</dt>     <dd>Nigerian Naira (₦)</dd>
-        <dt>Time Zone:</dt>    <dd>UTC+1 (WAT)</dd>
-        <dt>Calling Code:</dt> <dd>+234</dd>
-        <dt>Internet TLD:</dt> <dd>.ng</dd>
-      </dl>
-    </section>
+      <!-- Data card -->
+      <section class="data-section" aria-label="Nigeria country facts">
+        <h2>Data</h2>
+        <dl>
+          <dt>Area:</dt>          <dd>923,769 sq km</dd>
+          <dt>Population:</dt>   <dd>223,804,632</dd>
+          <dt>Capital:</dt>      <dd>Abuja</dd>
+          <dt>Languages:</dt>    <dd>English, Hausa, Yoruba, Igbo</dd>
+          <dt>Currency:</dt>     <dd>Nigerian Naira (₦)</dd>
+          <dt>Time Zone:</dt>    <dd>UTC+1 (WAT)</dd>
+          <dt>Calling Code:</dt> <dd>+234</dd>
+          <dt>Internet TLD:</dt> <dd>.ng</dd>
+        </dl>
+      </section>
 
-    <!-- Weather card -->
-    <section class="weather-section" aria-label="Current weather in Lagos, Nigeria">
-      <h2 class="weather-heading">Weather</h2>
+      <!-- Weather card -->
+      <section class="weather-section" aria-label="Current weather in Lagos, Nigeria">
+        <h2 class="weather-heading">Weather</h2>
 
-      <!-- SVG icon visible on mobile only -->
-      <img
-        src="images/partly-cloudy.svg"
-        alt="Partly cloudy weather icon"
-        class="weather-icon-svg"
-        width="80"
-        height="80"
-      />
+        <!-- SVG icon visible on mobile only -->
+        <img
+          src="images/partly-cloudy.svg"
+          alt="Partly cloudy weather icon"
+          class="weather-icon-svg"
+          width="80"
+          height="80"
+        />
 
-      <dl>
-        <dt>Temperature:</dt>  <dd>32 °C</dd>
-        <dt>Conditions:</dt>   <dd>Partly Cloudy</dd>
-        <dt>Wind:</dt>         <dd>14 km/h</dd>
-        <dt>Wind Chill:</dt>   <dd id="wind-chill">--</dd>
-      </dl>
-    </section>
-  </div><!-- end .hero-wrapper -->
+        <dl>
+          <dt>Temperature:</dt>  <dd>32 °C</dd>
+          <dt>Conditions:</dt>   <dd>Partly Cloudy</dd>
+          <dt>Wind:</dt>         <dd>14 km/h</dd>
+          <dt>Wind Chill:</dt>   <dd id="wind-chill">--</dd>
+        </dl>
+      </section>
+
+    </div><!-- end .hero-wrapper -->
+  </main>
 
   <footer>
-    <p>&copy;<span id="current-year"></span> 🦅 Lucky francis Oghenebrume 🦅 Nigeria</p>
+    <p>&copy;<span id="current-year"></span> 🦅 Lucky Francis Oghenebrume 🦅 Nigeria</p>
     <p>Last Modification: <span id="last-modified"></span></p>
   </footer>
 
