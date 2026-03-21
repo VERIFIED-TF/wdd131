@@ -1,0 +1,268 @@
+/* ============================================================
+   CSS Variables – Nigeria flag inspired palette
+   ============================================================ */
+:root {
+  --color-green:      #008751;   /* Nigeria flag green */
+  --color-green-dark: #005a36;
+  --color-green-light:#e6f5ee;
+  --color-white:      #ffffff;
+  --color-off-white:  #f7f9f7;
+  --color-text:       #1a1a1a;
+  --color-text-muted: #444444;
+  --color-card-bg:    rgba(255, 255, 255, 0.93);
+  --color-footer-bg:  #008751;
+  --color-footer-text:#ffffff;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --radius:  10px;
+  --shadow:  0 4px 24px rgba(0,0,0,0.18);
+  --transition: 0.25s ease;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-off-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+header {
+  background: var(--color-green);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1.6rem 1rem 1.2rem;
+  border-bottom: 6px solid var(--color-green-dark);
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.35rem;
+  opacity: 0.88;
+}
+
+/* ============================================================
+   Hero Wrapper – Mobile (stacked)
+   ============================================================ */
+.hero-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 420px;
+}
+
+/* ============================================================
+   Data & Weather Cards – Mobile (below image)
+   ============================================================ */
+.data-section,
+.weather-section {
+  background: var(--color-card-bg);
+  border: 2px solid var(--color-green-light);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  margin: 1.2rem auto;
+  max-width: 540px;
+  width: calc(100% - 2rem);
+  box-shadow: var(--shadow);
+}
+
+.data-section h2,
+.weather-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-green);
+}
+
+/* Definition list grid */
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 0.4rem;
+  align-items: baseline;
+}
+
+dt {
+  font-weight: 600;
+  text-align: right;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+dd {
+  font-weight: 400;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+/* SVG weather icon – mobile only */
+.weather-icon-svg {
+  display: block;
+  margin: 0.5rem auto 1rem;
+  width: 80px;
+  height: 80px;
+}
+
+/* Pseudo-element emoji icon on h2 in wide view (hidden on mobile) */
+.weather-heading::after {
+  content: '';   /* toggled in wide view */
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  background: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  text-align: center;
+  padding: 1.2rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-top: auto;
+}
+
+footer p + p {
+  opacity: 0.85;
+  font-size: 0.82rem;
+}
+
+/* ============================================================
+   Media Query – Wide View (≥ 768px)
+   ============================================================ */
+@media (min-width: 768px) {
+
+  /* Make the hero fill the viewport and serve as background for overlay cards */
+  .hero-wrapper {
+    position: relative;
+    max-height: 520px;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: none;
+  }
+
+  /* Cards become overlaid on the image */
+  .data-section,
+  .weather-section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 260px;
+    width: auto;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(4px);
+    border-color: var(--color-green);
+  }
+
+  .data-section {
+    left: 2rem;
+  }
+
+  .weather-section {
+    right: 2rem;
+    top: 80%;
+  }
+
+  /* Hide SVG icon on wide view; use pseudo-element emoticon instead */
+  .weather-icon-svg {
+    display: none;
+  }
+
+  /* Pseudo-element emoticon after Weather heading */
+  .weather-heading::after {
+    content: ' ⛅';
+    font-size: 1.3rem;
+    margin-left: 0.25rem;
+  }
+
+  header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+}
+
+/* ============================================================
+   Wide screens – expand cards slightly
+   ============================================================ */
+@media (min-width: 768px) {
+  .data-section,
+  .weather-section {
+    max-width: 300px;
+    padding: 1.8rem 2.2rem;
+  }
+
+  .hero-img {
+    height: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: none;
+  }
+
+  .hero-wrapper {
+    max-height: none;
+    overflow: hidden;
+    position: relative;
+  }
+
+  dt, dd {
+    font-size: 0.95rem;
+  }
+}
+.data-section h2,
+.weather-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background: rgba(0, 135, 81, 0.75);
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border-bottom: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
